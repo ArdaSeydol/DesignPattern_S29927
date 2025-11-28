@@ -1,0 +1,17 @@
+﻿namespace DesignPattern.Factory
+{
+    public class DataAnalyticsEngine
+    {
+        private readonly IDatabase _database;
+
+        public DataAnalyticsEngine(IDatabase database)
+        {
+            _database = database;
+        }
+
+        public void ProcessData(string query)
+        {
+            _database.ProcessQuery(query);
+        }
+    }
+}
